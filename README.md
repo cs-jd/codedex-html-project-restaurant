@@ -9,4 +9,4 @@ This is an HTML project, even though it has way more CSS than anything else. I k
 
 I'm very thankful to the Codédex community for being so helpful and keeping me accountable. I've done a lot of progress in the two days I dedicated to this project - way more than I thought to be possible.
 
-I intend to come back to this in the future and try to fix the not-so-ideal parts of the CSS. For now, I'm just happy I liked the end result.
+I intend to come back to this in the future and try to fix the not-so-ideal parts of the CSS. For now, I'm happy I liked the end result and will continue learning so I can always surpass my own expectations.
