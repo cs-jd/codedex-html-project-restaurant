@@ -1,0 +1,505 @@
+/* variables */
+
+:root {
+	--blurry-bg: rgba(255, 255, 255, 0.054);
+	--glass-border: rgba(255, 255, 255, 0.18);
+	--bg-color: rgb(13, 12, 10);
+	--accent-color: rgb(245, 161, 6);
+	--accent-color2: rgb(250, 186, 67);
+	--text-color: rgb(233, 233, 233);
+	--secondary-text-color: rgb(179, 176, 176);
+	--gradient: linear-gradient(90deg, rgba(255,207,126,1) 0%, rgba(255,182,53,1) 60%, rgba(255,166,0,1) 100%);
+	--home-gradient: linear-gradient(180deg, rgba(255,207,126,1) 0%, rgba(255,182,53,1) 5%, rgba(255,166,0,1) 100%);
+}
+
+/* reset */
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	color: var(--text-color);
+	font-size: 16px;
+}
+
+ul {
+	list-style: none;
+}
+
+/* general */
+
+html {
+	background-color: var(--bg-color);
+	font-family: Noto Sans, sans-serif;
+	scroll-behavior: smooth;
+}
+
+.bg {
+	max-width: unset;
+	background-size: cover;
+}
+
+
+h1, h2 {
+	text-align: center;
+}
+
+h1 {
+	margin: 20vh auto 0 auto;
+	font-size: 4rem;
+	font-weight: 500;
+}
+
+h2 {
+	font-family: Noto Sans JP, sans-serif;
+	font-size: 3.5rem;
+	font-weight: 300;
+	margin-bottom: 2%;
+}
+
+h3 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	text-align: center;
+	margin: 8% auto 4% auto;
+	color: var(--accent-color);
+}
+
+h4 {
+	font-size: 1.8rem;
+	margin: 2% auto 1% auto;
+	font-weight: 500;
+	color: var(--accent-color);
+}
+
+h3, h4, legend {
+	font-family: Poppins, sans-serif;
+}
+
+.about-header {
+	margin: 0 auto 2% auto;
+}
+
+body {
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+section {
+	height: 100vh;
+	margin: 0;
+}
+
+legend {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-align: center;
+	color: var(--accent-color);
+	margin-bottom: 3%;
+}
+
+p {
+	margin: 0 0 2px 0;
+	text-wrap: wrap;
+	font-size: 0.9rem;
+}
+
+
+/* buttons/icon */
+
+button {
+	background-color: var(--accent-color);
+	width: 2%;
+	padding: 0.5%;
+	border-radius: 5px;
+	position: absolute;
+	cursor: pointer;
+	border: unset;
+}
+
+button:hover {
+	background: var(--gradient);
+}
+
+#menu-to-home {
+	right: 2%;
+	bottom: -97%;
+}
+
+#menu-to-order {
+	right: 4.5%;
+	bottom: -97%;
+}
+
+#order-to-menu {
+	right: 2%;
+	bottom: -197%;
+}
+
+#order-to-about {
+	right: 4.5%;
+	bottom: -197%;
+}
+
+#about-to-order {
+	right: 2%;
+	bottom: -297%;
+}
+
+#about-to-home {
+	right: 4.5%;
+	bottom: -297%;
+}
+
+i {
+	color: var(--bg-color);
+	font-size: 1.1em;
+}
+
+/* backgrounds */
+
+header {
+	margin: unset;
+	padding: unset;
+	border: unset;
+	height: 100vh;
+}
+
+#header-img {
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: 100vh;
+	max-width: unset !important;
+	filter: saturate(135%)
+}
+
+#page-bg {
+	background: url(/media/126480823-narutomaki-padrão-sem-emenda-de-comida-japonesa-no-fundo-rosa-removebg-preview.png);
+	position: absolute;
+	right: 0;
+	top: 100%;
+	width: 100%;
+	height: 304vh;
+	z-index: -1;
+	opacity: 0.01;
+}
+
+/* 1st page, navbar */
+
+.shadow {
+	background:
+		linear-gradient(
+		  to top,
+		  hsl(0, 0%, 0%) 0%,
+		  hsla(0, 0%, 0%, 0.998) 0.1%,
+		  hsla(0, 0%, 0%, 0.995) 0.4%,
+		  hsla(0, 0%, 0%, 0.988) 1.1%,
+		  hsla(0, 0%, 0%, 0.977) 2.4%,
+		  hsla(0, 0%, 0%, 0.959) 4.4%,
+		  hsla(0, 0%, 0%, 0.932) 7.3%,
+		  hsla(0, 0%, 0%, 0.894) 11.2%,
+		  hsla(0, 0%, 0%, 0.845) 16.4%,
+		  hsla(0, 0%, 0%, 0.781) 22.9%,
+		  hsla(0, 0%, 0%, 0.701) 31%,
+		  hsla(0, 0%, 0%, 0.604) 40.7%,
+		  hsla(0, 0%, 0%, 0.487) 52.4%,
+		  hsla(0, 0%, 0%, 0.349) 66%,
+		  hsla(0, 0%, 0%, 0.187) 81.8%,
+		  hsla(0, 0%, 0%, 0) 100%
+		);
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+	height: 100vh;
+}
+
+.nav-container {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+	margin: 0 auto 0 auto;
+	max-width: 30%;
+	z-index: 1;
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2% 0 0 0;
+	margin-top: 47vh;
+	height: auto;
+}
+
+.nav-button {
+	padding: 6px 30px;
+	margin: 2% auto 2% auto;
+	font-size: 2em;
+	font-weight: 400;
+	color: (var(--text-color));
+	background-color: transparent;
+	transition: .2s;
+	border-radius: 12px;
+}
+
+.nav-button:hover {
+	background: var(--home-gradient);
+	color: var(--bg-color);
+	font-weight: 500;
+}
+
+/* 2nd page, menu */
+
+.menu {
+	padding: auto;
+	margin:  auto 0 auto;
+	max-width: 100%;
+	align-self: center;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+}
+
+.menu-box>h3 {
+	margin-top: unset;
+}
+
+.menu-box {
+	background: var(--blurry-bg);
+	backdrop-filter: blur( 4.5px );
+	-webkit-backdrop-filter: blur( 4.5px );
+	border: 1px solid var(--glass-border);
+	border-radius: 12px;
+	padding: 4%;
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+}
+
+.menu-item {
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+.price {
+	font-style: italic;
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: var(--secondary-text-color)
+}
+
+.ingredients {
+	font-weight: 300;
+}
+
+.warning {
+	font-weight: 400;
+	color: orange;
+}
+
+img.item {
+	float: right;
+	width: 13%;
+	border-radius: 50%;
+	position: relative;
+	margin: 12px 0 10px 0;
+}
+
+/* 3rd page, order */
+
+hr {
+	color: var(--secondary-text-color);
+	opacity: 5%;
+	margin: 4% auto 4% auto;
+	width: 100%;
+}
+
+.order {
+	align-content: center;
+	border-bottom: 1px solid rgba(233, 233, 233, 0.3);
+	border-top: 1px solid rgba(233, 233, 233, 0.3);
+}
+
+.order>form#order-box>h3 {
+	margin-top: unset;
+}
+
+.order>form#order-box {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-direction: column;
+	max-width: 20%;
+	text-align: left;
+	background: var(--blurry-bg);
+	backdrop-filter: blur( 4.5px );
+	-webkit-backdrop-filter: blur( 4.5px );
+	border: 1px solid var(--glass-border);
+	border-radius: 12px;
+	padding: 1.5%;
+	display: flex;
+	margin: auto;
+	flex-direction: column;
+}
+
+input, textarea {
+	color: var(--text-color);
+	background-color: rgb(87, 87, 87);
+	border: 1px solid darkgray;
+	border-radius: 6px;
+	padding: 4px;
+}
+
+input {
+	margin-right: 10px;
+}
+
+.option {
+	display: flex;
+	justify-content: space-between;
+	text-wrap: nowrap;
+	margin-top: auto;
+}
+
+fieldset {
+	border: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 3%;
+	row-gap: 8px;
+}
+
+.side-dishes {
+	padding-right: 5%;
+}
+
+label {
+	padding: 10px 0 10px 0;
+	margin: 0 0 2% 0;
+	font-size: 1.2rem;
+	font-weight: 300;
+	width: 25%;
+}
+
+.requests {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	width: 100%;
+}
+
+.number-inputs {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input[type="number"] {
+	width: 40px;
+	height: 30px;
+	padding: 2px;
+	text-align: center;
+	margin-right: unset;
+}
+
+input[type="radio"], input[type="checkbox"] {
+	accent-color: var(--accent-color);
+}
+
+input[type="checkbox"] {
+	border-radius: 2px;
+	margin-bottom: 0;
+}
+
+input[type="radio"] {
+	border-radius: 50px;
+	margin-bottom: 0;
+}
+
+textarea {
+	margin: 10px 0 10px 0;
+	height: 100px;
+}
+
+#checkout {
+	display: block;
+	font-size: 1em;
+	font-weight: 600;
+	padding: 12px;
+	width: 100%;
+	cursor: pointer;
+	background: var(--gradient);
+	background-size: 200% 200%;
+	background-position: right;
+	border: none;
+	color: var(--bg-color);
+	transition: all .2s linear;
+}
+
+#checkout:hover {
+	background-position: left;
+}
+
+/* 4th page, about */
+
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	flex-direction: row;
+	display: flex;
+	margin: auto;
+	/* max-width: 100%; */
+	max-height: 100vh;
+	margin-top: 0;
+	gap: 20px;
+}
+
+.about-restaurant, .about-me {
+	padding: 2%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 16%;
+	max-height: 60%;
+	border: 1px solid black;
+	border-radius: 12px;
+	margin: auto 0 auto;
+	background: var(--blurry-bg);
+	backdrop-filter: blur( 4.5px );
+	-webkit-backdrop-filter: blur( 4.5px );
+	border: 1px solid var(--glass-border);
+}
+
+.about-pic {
+	align-self: center;
+	margin: 0;
+	border-radius: 6px;
+}
+
+.about-restaurant>img {
+	width: 80%;
+}
+
+.about-me>img {
+	width: 80%;
+}
+
+.about-me>p, .about-restaurant>p {
+	font-size: 1em;
+	font-weight: 300;
+	text-align: justify;
+	margin: 0 8% 0 8%;
+}
+
+footer {
+	text-align: center;
+	font-weight: 200;
+	font-size: 0.8rem;
+}
