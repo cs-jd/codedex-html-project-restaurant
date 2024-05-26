@@ -12,7 +12,7 @@
 
 	<link rel="stylesheet" href="style.css">
 
-	<link rel="icon" type="image/x-icon" href="media/favicon.png">
+	<link rel="icon" type="image/x-icon" href="/media/favicon.png">
 
 	<title>Ichiraku Ramen</title>
 </head>
@@ -20,7 +20,7 @@
 <body>
 	<header id="home">
 		<div class="shadow"></div>
-		<img src="media/restaurant-front.png" alt="Ichiraku Ramen's restaurant front" id="header-img">
+		<img src="/media/restaurant-front.png" alt="Ichiraku Ramen's restaurant front" id="header-img">
 	
 		<h1>Ramen Ichiraku</h1>
 		<h2>ラーメン一楽</h2>
@@ -36,31 +36,31 @@
 			<main class="menu-box">
 				<h3>Menu</h3>
 				<article class="menu-item">
-					<img src="media/1st-ramen.jpg" alt="Special Ramen in a bowl" class="item">
+					<img src="/media/1st-ramen.jpg" alt="Special Ramen in a bowl" class="item">
 					<h4>SPECIAL RAMEN</h4>
 					<p class="price">$10.42</p>
 					<p class="ingredients">Chili oil, soy sauce, ginger, garlic, citrus, pork, kombu, sake, eggs and ramen noodles.</p>
 				</article>
 				<article class="menu-item">
-					<img src="media/ramen-plate.png" alt="Ichiraku Ramen in a bowl" class="item">
+					<img src="/media/ramen-plate.png" alt="Ichiraku Ramen in a bowl" class="item">
 					<h4>ICHIRAKU RAMEN</h4>
 					<p class="price">$9.60</p>
 					<p class="ingredients">Soy sauce, pork belly, ginger, garlic, onion, mirin, sugar, sake and ramen noodles. <span class="warning">It's spicy, be careful!</span></p>
 				</article>
 				<article class="menu-item">
-					<img src="media/wagamama-plate.png" alt="Wagamama Ramen in a bowl" class="item">
+					<img src="/media/wagamama-plate.png" alt="Wagamama Ramen in a bowl" class="item">
 					<h4>WAGAMAMA RAMEN</h4>
 					<p class="price">$11.08</p>
 					<p class="ingredients">Soy sauce, sesame oil, pak choi, sriracha, chicken, garlic, ginger, red onion, red chillies and ramen noodles.</p>
 				</article>
 				<article class="menu-item">
-					<img src="media/veggie-ramen.jpg" alt="Vegetarian Ramen in a bowl" class="item">
+					<img src="/media/veggie-ramen.jpg" alt="Vegetarian Ramen in a bowl" class="item">
 					<h4>VEGETARIAN RAMEN</h4>
 					<p class="price">$12.30</p>
 					<p class="ingredients">Avocado oil, garlic, ginger, onion, soy sauce, shiitake mushrooms, miso paste, sesame oil and ramen noodles.</p>
 				</article>
 				<article class="menu-item" id="soda">
-					<img src="media/cola.png" alt="A can of Cola-Cola" class="item">
+					<img src="/media/cola.png" alt="A can of Cola-Cola" class="item">
 					<h4>COLA</h4>
 					<p class="price">$1.99</p>
 					<p class="ingredients">Cola-Cola soda.</p>
@@ -83,31 +83,31 @@
 		<form action="https://www.twitch.tv/videos/1110069047" id="order-box" target="_blank">
 			<h3>Place your order</h3>
 				<div class="option">
-					<label for="special-ramen" class="number-inputs">Special Ramen</label><input type="number" name="food" id="special-ramen" value="0" min="0" max="10">
+					<label for="special-ramen" name="food" class="number-inputs">Special Ramen</label><input type="number" name="special-ramen" id="special-ramen" value="0" min="0" max="10">
 				</div>
 				<div class="option">
-					<label for="ichiraku-ramen" class="number-inputs">Ichiraku Ramen</label><input type="number" name="food" id="ichiraku-ramen" value ="0" min="0" max="10">
+					<label for="ichiraku-ramen" class="number-inputs">Ichiraku Ramen</label><input type="number" name="ichiraku-ramen" id="ichiraku-ramen" value ="0" min="0" max="10">
 				</div>
 				<div class="option">
-					<label for="wagamama-ramen" class="number-inputs">Wagamama Ramen</label><input type="number" name="food" id="wagamama-ramen" value ="0" min="0" max="10">
+					<label for="wagamama-ramen" class="number-inputs">Wagamama Ramen</label><input type="number" name="wagamama-ramen" id="wagamama-ramen" value ="0" min="0" max="10">
 				</div>
 				<div class="option">
-					<label for="veggie-ramen" class="number-inputs">Vegetarian Ramen</label><input type="number" name="food" value ="0" id="veggie-ramen" min="0" max="10">
+					<label for="veggie-ramen" class="number-inputs">Vegetarian Ramen</label><input type="number" name="veggie-ramen" value ="0" id="veggie-ramen" min="0" max="10">
 				</div>
 				<div class="option">
-					<label for="cola" class="number-inputs">Cola</label><input type="number" name="drink" id="cola"  value ="0" min="0" max="10">
+					<label for="cola" class="number-inputs">Cola</label><input type="number" name="cola" id="cola"  value ="0" min="0" max="10">
 				</div>
 				<hr>
 				<fieldset class="choice">
 					<legend>Side dishes</legend>
-					<div class="side-dishes"><input type="checkbox" name="extras" id="gyoza"><label for="gyoza" class="add-ons">Gyoza</label></div>
-					<div class="side-dishes"><input type="checkbox" name="extras" id="egg-rolls"><label for="egg-rolls" class="add-ons">Egg rolls</label></div>
-					<div class="side-dishes"><input type="checkbox" name="extras" id="narutomaki"><label for="narutomaki" class="add-ons">Narutomaki</label></div>
-					<div class="side-dishes"><input type="checkbox" name="extras" id="fried-rice"><label for="fried-rice" class="add-ons">Fried rice</label></div>
-					<div class="side-dishes"><input type="checkbox" name="extras" id="dumplings"><label for="dumplings" class="add-ons">Dumplings</label></div>
+					<div class="side-dishes"><input type="checkbox" name="extras" id="gyoza"><label for="gyoza">Gyoza</label></div>
+					<div class="side-dishes"><input type="checkbox" name="extras" id="egg-rolls"><label for="egg-rolls">Egg rolls</label></div>
+					<div class="side-dishes"><input type="checkbox" name="extras" id="narutomaki"><label for="narutomaki">Narutomaki</label></div>
+					<div class="side-dishes"><input type="checkbox" name="extras" id="fried-rice"><label for="fried-rice">Fried rice</label></div>
+					<div class="side-dishes"><input type="checkbox" name="extras" id="dumplings"><label for="dumplings">Dumplings</label></div>
 				</fieldset>
 				<hr>
-				<label for="" class="requests">Any special requests?<textarea name="" id="" maxlength="500" placeholder="I want to get mirin removed and..."></textarea></label>
+				<label for="special-requests" class="requests">Any special requests?<textarea name="special-requests" id="special-requests" maxlength="500" placeholder="I want to get mirin removed and..."></textarea></label>
 				<input type="submit" value="GO TO CHECKOUT" id="checkout">
 		</form>
 		<form action="#menu">
@@ -125,12 +125,12 @@
 	<section class="about-container" id="about-container">
 		<div class="about-restaurant">
 			<h4 class="about-header">About the restaurant</h4>
-			<img src="media/naruto-eating.png" alt="Naruto eating ramen" class="about-pic"><br>
+			<img src="/media/naruto-eating.png" alt="Naruto eating ramen" class="about-pic"><br>
 			<p>Here in Ramen Ichiraku, you will always be well treated. We make our food with love thinking about making our customers happy.</p>
 		</div>
 		<div class="about-me">
 			<h4 class="about-header">About me</h4>
-			<img src="media/teuchi.png" alt="Teuchi's picture" class="about-pic"><br>
+			<img src="/media/teuchi.png" alt="Teuchi's picture" class="about-pic"><br>
 			<p>My name is Teuchi. I've devoted almost my entire life to making ramen. Cooking for people makes me feel connected to them.</p>
 		</div>
 		<form action="#order">
