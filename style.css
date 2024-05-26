@@ -3,13 +3,14 @@
 :root {
 	--blurry-bg: rgba(255, 255, 255, 0.054);
 	--glass-border: rgba(255, 255, 255, 0.18);
-	--bg-color: rgb(13, 12, 10);
+	--bg-color-solid: rgba(13, 12, 10);
+	--bg-color: linear-gradient(180deg, rgba(13, 12, 10, 1) 0%, rgb(20, 20, 17) 60%, rgb(31, 28, 25) 100%);
 	--accent-color: rgb(245, 161, 6);
 	--accent-color2: rgb(250, 186, 67);
 	--text-color: rgb(233, 233, 233);
 	--secondary-text-color: rgb(179, 176, 176);
 	--gradient: linear-gradient(90deg, rgba(255,207,126,1) 0%, rgba(255,182,53,1) 60%, rgba(255,166,0,1) 100%);
-	--home-gradient: linear-gradient(180deg, rgba(255,207,126,1) 0%, rgba(255,182,53,1) 5%, rgba(255,166,0,1) 100%);
+	--home-gradient: linear-gradient(180deg, rgba(255,207,126,1) 0%, rgba(255,182,53,1) 0.5%, rgba(255,166,0,1) 15%);
 }
 
 /* reset */
@@ -29,16 +30,11 @@ ul {
 /* general */
 
 html {
-	background-color: var(--bg-color);
+	background: var(--bg-color);
+	background: var(--bg-color-solid);
 	font-family: Noto Sans, sans-serif;
 	scroll-behavior: smooth;
 }
-
-.bg {
-	max-width: unset;
-	background-size: cover;
-}
-
 
 h1, h2 {
 	text-align: center;
@@ -106,6 +102,34 @@ p {
 	font-size: 0.9rem;
 }
 
+/* backgrounds */
+
+header {
+	margin: unset;
+	padding: unset;
+	border: unset;
+	height: 100vh;
+}
+
+#header-img {
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: 100vh;
+	max-width: unset !important;
+	filter: saturate(135%)
+}
+
+#page-bg {
+	background: url(/media/126480823-narutomaki-padrão-sem-emenda-de-comida-japonesa-no-fundo-rosa-removebg-preview.png);
+	position: absolute;
+	right: 0;
+	top: 100%;
+	width: 100%;
+	height: 304.5vh;
+	z-index: -1;
+	opacity: 0.01;
+}
 
 /* buttons/icon */
 
@@ -154,37 +178,8 @@ button:hover {
 }
 
 i {
-	color: var(--bg-color);
+	color: var(--bg-color-solid);
 	font-size: 1.1em;
-}
-
-/* backgrounds */
-
-header {
-	margin: unset;
-	padding: unset;
-	border: unset;
-	height: 100vh;
-}
-
-#header-img {
-	position: absolute;
-	z-index: -2;
-	width: 100%;
-	height: 100vh;
-	max-width: unset !important;
-	filter: saturate(135%)
-}
-
-#page-bg {
-	background: url(media/126480823-narutomaki-padrão-sem-emenda-de-comida-japonesa-no-fundo-rosa-removebg-preview.png);
-	position: absolute;
-	right: 0;
-	top: 100%;
-	width: 100%;
-	height: 304vh;
-	z-index: -1;
-	opacity: 0.01;
 }
 
 /* 1st page, navbar */
@@ -249,7 +244,7 @@ header {
 
 .nav-button:hover {
 	background: var(--home-gradient);
-	color: var(--bg-color);
+	color: var(--bg-color-solid);
 	font-weight: 500;
 }
 
@@ -363,7 +358,7 @@ input {
 	display: flex;
 	justify-content: space-between;
 	text-wrap: nowrap;
-	margin-top: auto;
+	margin-top: auto; /* centering text vertically */
 }
 
 fieldset {
@@ -438,7 +433,7 @@ textarea {
 	background-size: 200% 200%;
 	background-position: right;
 	border: none;
-	color: var(--bg-color);
+	color: var(--bg-color-solid);
 	transition: all .2s linear;
 }
 
@@ -455,7 +450,6 @@ textarea {
 	flex-direction: row;
 	display: flex;
 	margin: auto;
-	/* max-width: 100%; */
 	max-height: 100vh;
 	margin-top: 0;
 	gap: 20px;
@@ -502,4 +496,5 @@ footer {
 	text-align: center;
 	font-weight: 200;
 	font-size: 0.8rem;
+	margin-bottom: 1%;
 }
