@@ -2,6 +2,9 @@
 
 Restaurant menu made as the final project for Codédex's HTML course.
 
+## Idea
+
+The assigment was to make a restaurant website following specific HTML requirements, with a menu and an ordering form. I chose to use a fictional restaurant from the anime _Naruto_. As I was making the project, more and more ideas came to mind and I couldn't just send a simple HTML project - I had to make those ideas come to life. I didn't know everything I needed to know to get to this result, but now I'm glad I decided to stick to it, cause I've learned a lot.
 
 ## About the project
 
