@@ -245,7 +245,6 @@ i {
 .nav-button:hover {
 	background: var(--home-gradient);
 	color: var(--bg-color-solid);
-	font-weight: 500;
 }
 
 /* 2nd page, menu */
